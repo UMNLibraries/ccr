@@ -1,78 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
     <title>Picart’s Religious Ceremonies and Customs of the World</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      #viewer {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-      }
-    </style>
-    <link rel="stylesheet" type="text/css" href="mirador/css/mirador-combined.min.css">
-    <script src="mirador/mirador.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
   </head>
   <body>
-    <div id="viewer"></div>
+    <div id="mirador" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></div>
+    <script>document.write("<script type='text/javascript' src='dist/mirador.min.js?v=" + Date.now() + "'><\/script>");</script>
     <script type="text/javascript">
-      $(function() {
-            myMiradorInstance = Mirador({
-              "id": "viewer",
-              "layout": "1x2",
-              "buildPath": "",
-              "data": [
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/gri_33125012232795/manifest.json", "location": "Getty Research Institute"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/gri_33125008477628/manifest.json", "location": "Getty Research Institute"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/gri_33125012289050/manifest.json", "location": "Getty Research Institute"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/gri_33125011175565/manifest.json", "location": "Getty Research Institute"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/gri_33125008479129/manifest.json", "location": "Getty Research Institute"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/gri_33125012278640/manifest.json", "location": "Getty Research Institute"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/gri_33125012239386/manifest.json", "location": "Getty Research Institute"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/gri_33125008479053/manifest.json", "location": "Getty Research Institute"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/gri_33125008479004/manifest.json", "location": "Getty Research Institute"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/gri_33125008479004/manifest.json", "location": "Princeton Theological Seminary Library"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/ceremoniesreligi627pica/manifest.json", "location": "Princeton Theological Seminary Library"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/ceremoniesreligi42pica/manifest.json", "location": "Princeton Theological Seminary Library"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/ceremoniesreligi61pica/manifest.json", "location": "Princeton Theological Seminary Library"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/ceremoniesreligi05pica/manifest.json", "location": "Princeton Theological Seminary Library"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/ceremoniesreligi03pica/manifest.json", "location": "Princeton Theological Seminary Library"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/ceremoniesreligi01pica/manifest.json", "location": "Princeton Theological Seminary Library"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/ceremoniesreligi02pica/manifest.json", "location": "Princeton Theological Seminary Library"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/cihm_48776/manifest.json", "location": "University of Alberta Libraries"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/cihm_48778/manifest.json", "location": "University of Alberta Libraries"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/cihm_48777/manifest.json", "location": "University of Alberta Libraries"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/bub_gb_zf9__cLchwUC/manifest.json", "location": "National Library of Naples"},
-                  { "manifestUri": "https://iiif.archivelab.org/iiif/bub_gb_joQQwnTrB4gC/manifest.json", "location": "National Library of Naples"},
-                  { "manifestUri": "https://gallica.bnf.fr/ark:/12148/bpt6k1511251z/manifest.json", "location": "Bibliothèque nationale de France"},
-                  { "manifestUri": "https://gallica.bnf.fr/ark:/12148/bpt6k1511253s/manifest.json", "location": "Bibliothèque nationale de France"},
-                  { "manifestUri": "https://gallica.bnf.fr/ark:/12148/bpt6k1511255m/manifest.json", "location": "Bibliothèque nationale de France"},
-                  { "manifestUri": "https://gallica.bnf.fr/ark:/12148/bpt6k1511257f/manifest.json", "location": "Bibliothèque nationale de France"},
-                  { "manifestUri": "https://gallica.bnf.fr/ark:/12148/bpt6k15112598/manifest.json", "location": "Bibliothèque nationale de France"},
-                  { "manifestUri": "https://gallica.bnf.fr/ark:/12148/bpt6k1511261b/manifest.json", "location": "Bibliothèque nationale de France"},
-                  { "manifestUri": "https://gallica.bnf.fr/ark:/12148/bpt6k15112635/manifest.json", "location": "Bibliothèque nationale de France"},
-                  { "manifestUri": "https://gallica.bnf.fr/ark:/12148/btv1b23005558/manifest.json", "location": "Bibliothèque nationale de France"},
-                  { "manifestUri": "https://collections.carli.illinois.edu/digital/iiif-info/nby_dig/15132", "location": "Newberry Library"}
-              ],
-              "windowObjects": [{
-                loadedManifest: "https://iiif.archivelab.org/iiif/ceremoniesreligi627pica/manifest.json",
-                viewType: "ImageView",
-                slotAddress: "row1.column1"
-              }],
-              "annotationEndpoint": { "name":"Local Storage", "module": "LocalStorageEndpoint" },
-              "windowSettings": {
-                "canvasControls": { // The types of controls available to be displayed on a canvas
-                  "imageManipulation" : {
-                    "manipulationLayer" : true,
-                    "controls" : {
-                      "mirror" : true
-                    }
-                  }
-                }
-              }
-            });
-          });
+     var miradorInstance = Mirador.viewer({
+       id: 'mirador',
+       windows: [
+       {
+         manifestId: 'https://iiif.archivelab.org/iiif/ceremoniesreligi02pica/manifest.json',
+         thumbnailNavigationPosition: 'far-bottom'
+       },
+       {
+         manifestId: 'https://iiif.archivelab.org/iiif/gri_33125008479004/manifest.json',
+         thumbnailNavigationPosition: 'far-bottom'
+       }
+       ],
+       window: {
+         panels: { // Configure which panels are visible in WindowSideBarButtons
+           search: true,
+         }
+       },
+       manifests: {
+        "https://iiif.archivelab.org/iiif/gri_33125012232795/manifest.json": { provider: "Getty Research Institute"},
+        "https://iiif.archivelab.org/iiif/gri_33125008477628/manifest.json": { provider: "Getty Research Institute"},
+        "https://iiif.archivelab.org/iiif/gri_33125012289050/manifest.json": { provider: "Getty Research Institute"},
+        "https://iiif.archivelab.org/iiif/gri_33125011175565/manifest.json": { provider: "Getty Research Institute"},
+        "https://iiif.archivelab.org/iiif/gri_33125008479129/manifest.json": { provider: "Getty Research Institute"},
+        "https://iiif.archivelab.org/iiif/gri_33125012278640/manifest.json": { provider: "Getty Research Institute"},
+        "https://iiif.archivelab.org/iiif/gri_33125012239386/manifest.json": { provider: "Getty Research Institute"},
+        "https://iiif.archivelab.org/iiif/gri_33125008479053/manifest.json": { provider: "Getty Research Institute"},
+        "https://iiif.archivelab.org/iiif/gri_33125008479004/manifest.json": { provider: "Getty Research Institute"},
+        "https://iiif.archivelab.org/iiif/gri_33125008479004/manifest.json": { provider: "Princeton Theological Seminary Library"},
+        "https://iiif.archivelab.org/iiif/ceremoniesreligi627pica/manifest.json": { provider: "Princeton Theological Seminary Library"},
+        "https://iiif.archivelab.org/iiif/ceremoniesreligi42pica/manifest.json": { provider: "Princeton Theological Seminary Library"},
+        "https://iiif.archivelab.org/iiif/ceremoniesreligi61pica/manifest.json": { provider: "Princeton Theological Seminary Library"},
+        "https://iiif.archivelab.org/iiif/ceremoniesreligi05pica/manifest.json": { provider: "Princeton Theological Seminary Library"},
+        "https://iiif.archivelab.org/iiif/ceremoniesreligi03pica/manifest.json": { provider: "Princeton Theological Seminary Library"},
+        "https://iiif.archivelab.org/iiif/ceremoniesreligi01pica/manifest.json": { provider: "Princeton Theological Seminary Library"},
+        "https://iiif.archivelab.org/iiif/ceremoniesreligi02pica/manifest.json": { provider: "Princeton Theological Seminary Library"},
+        "https://iiif.archivelab.org/iiif/cihm_48776/manifest.json": { provider: "University of Alberta Libraries"},
+        "https://iiif.archivelab.org/iiif/cihm_48778/manifest.json": { provider: "University of Alberta Libraries"},
+        "https://iiif.archivelab.org/iiif/cihm_48777/manifest.json": { provider: "University of Alberta Libraries"},
+        "https://iiif.archivelab.org/iiif/bub_gb_zf9__cLchwUC/manifest.json": { provider: "National Library of Naples"},
+        "https://iiif.archivelab.org/iiif/bub_gb_joQQwnTrB4gC/manifest.json": { provider: "National Library of Naples"},
+        "https://gallica.bnf.fr/ark:/12148/bpt6k1511251z/manifest.json": { provider: "Bibliothèque nationale de France"},
+        "https://gallica.bnf.fr/ark:/12148/bpt6k1511253s/manifest.json": { provider: "Bibliothèque nationale de France"},
+        "https://gallica.bnf.fr/ark:/12148/bpt6k1511255m/manifest.json": { provider: "Bibliothèque nationale de France"},
+        "https://gallica.bnf.fr/ark:/12148/bpt6k1511257f/manifest.json": { provider: "Bibliothèque nationale de France"},
+        "https://gallica.bnf.fr/ark:/12148/bpt6k15112598/manifest.json": { provider: "Bibliothèque nationale de France"},
+        "https://gallica.bnf.fr/ark:/12148/bpt6k1511261b/manifest.json": { provider: "Bibliothèque nationale de France"},
+        "https://gallica.bnf.fr/ark:/12148/bpt6k15112635/manifest.json": { provider: "Bibliothèque nationale de France"},
+        "https://gallica.bnf.fr/ark:/12148/btv1b23005558/manifest.json": { provider: "Bibliothèque nationale de France"},
+        "https://collections.carli.illinois.edu/digital/iiif-info/nby_dig/15132": { provider: "Newberry Library"}
+       }
+     });
     </script>
   </body>
 </html>
