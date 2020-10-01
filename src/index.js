@@ -1,3 +1,7 @@
+import Mirador from 'mirador/dist/es/src/index';
+import miradorDownloadPlugin from 'mirador-dl-plugin/es/miradorDownloadPlugin.js';
+import miradorDownloadDialogPlugin from 'mirador-dl-plugin/es/MiradorDownloadDialog.js';
+
 var miradorInstance = Mirador.viewer({
   id: 'mirador',
   windows: [
@@ -91,4 +95,7 @@ var miradorInstance = Mirador.viewer({
    "https://iiif.library.ucla.edu/ark%3A%2F21198%2Fzz0002hb2r/manifest": { provider: "UCLA"},
    "https://iiif.library.ucla.edu/ark%3A%2F21198%2Fzz0002hb17/manifest": { provider: "UCLA"}
   }
-});
+}, [
+  miradorDownloadPlugin,
+  miradorDownloadDialogPlugin,
+]);

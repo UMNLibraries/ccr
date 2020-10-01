@@ -4,7 +4,14 @@ An instance of the [Mirador](https://github.com/ProjectMirador/mirador) applicat
 
 ## **( [see a demo](https://umnlibraries.github.io/ccr/) )**
 
-## Updating Mirador
-The simplest way to update Mirador is to grab the desired version from unpkg.com. For example, to download the latest beta build:
+## Installing dependencies
 
-`wget -O mirador.min.js https://unpkg.com/mirador@beta/dist/mirador.min.js`
+```sh
+npm install
+```
+
+## Building the project
+
+```sh
+npm run build
+```
