@@ -6,11 +6,11 @@ var miradorInstance = Mirador.viewer({
   id: 'mirador',
   windows: [
   {
-    manifestId: 'https://iiif.archivelab.org/iiif/ceremoniesreligi02pica/manifest.json',
+    manifestId: 'https://iiif.archivelab.org/iiif/ceremoniesreligi05pica/manifest.json',
     thumbnailNavigationPosition: 'far-bottom'
   },
   {
-    manifestId: 'https://iiif.archivelab.org/iiif/gri_33125008479004/manifest.json',
+    manifestId: 'https://iiif.archivelab.org/iiif/gri_33125008479129/manifest.json',
     thumbnailNavigationPosition: 'far-bottom'
   }
   ],
