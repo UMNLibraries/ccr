@@ -19,6 +19,9 @@ var miradorInstance = Mirador.viewer({
       search: true,
     }
   },
+  workspace: {
+    showZoomControls: true,
+  },
   catalog: [
    { manifestId: "https://iiif.archivelab.org/iiif/gri_33125012232795/manifest.json", provider: "Getty Research Institute"},
    { manifestId: "https://iiif.archivelab.org/iiif/gri_33125008477628/manifest.json", provider: "Getty Research Institute"},
